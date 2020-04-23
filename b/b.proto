@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package eomaxwhm.mlkyzwdkup.akitxgghqd;
+
+option go_package = "b";
+
+message MsgVedycrEaaidqrielx {
+    string a = 1;
+    bytes b = 2;
+    uint64 c = 3;
+    string d = 4;
+    int64 e = 5;
+}
+
+message MsgMliexjcuyIcbatudgl {
+    string a = 1;
+    bytes b = 2;
+    uint64 c = 3;
+    string d = 4;
+    int64 e = 5;
+}
+
+message MsgLpctqrWokmmwtlm {
+    string a = 1;
+    bytes b = 2;
+    uint64 c = 3;
+    string d = 4;
+    int64 e = 5;
+}
+

@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package cmtoobvajr.eqxdywkqqi.nizvnof;
+
+option go_package = "c";
+
+message MsgIggmhogotlAdolnphpfi {
+    string a = 1;
+    bytes b = 2;
+    uint64 c = 3;
+    string d = 4;
+    int64 e = 5;
+}
+
+message MsgCrbjxhtnahzEkoyklxdc {
+    string a = 1;
+    bytes b = 2;
+    uint64 c = 3;
+    string d = 4;
+    int64 e = 5;
+}
+
+message MsgUzewjmoiKursyvlk {
+    string a = 1;
+    bytes b = 2;
+    uint64 c = 3;
+    string d = 4;
+    int64 e = 5;
+}
+

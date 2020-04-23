@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package tobrqchnip.pqvmqjx.hmeluptxh;
+
+option go_package = "a";
+
+message MsgPousljlwlybJloivfeuc {
+    string a = 1;
+    bytes b = 2;
+    uint64 c = 3;
+    string d = 4;
+    int64 e = 5;
+}
+
+message MsgMrtsdxfVexxblyqrzg {
+    string a = 1;
+    bytes b = 2;
+    uint64 c = 3;
+    string d = 4;
+    int64 e = 5;
+}
+
+message MsgLpctqrWokmmwtlm {
+    string a = 1;
+    bytes b = 2;
+    uint64 c = 3;
+    string d = 4;
+    int64 e = 5;
+}
