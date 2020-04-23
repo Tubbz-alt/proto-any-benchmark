@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package phbexmzdpk.jbduaip.gxwdhenwu;
 
-option go_package = "d";
+option go_package = "github.com/regen-network/proto-any-benchmark/d";
 
 message MsgBtolfeintfGglqwlxnq {
     string a = 1;

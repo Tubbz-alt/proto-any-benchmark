@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package eomaxwhm.mlkyzwdkup.akitxgghqd;
 
-option go_package = "b";
+option go_package = "github.com/regen-network/proto-any-benchmark/b";
 
 message MsgVedycrEaaidqrielx {
     string a = 1;
@@ -20,7 +20,7 @@ message MsgMliexjcuyIcbatudgl {
     int64 e = 5;
 }
 
-message MsgLpctqrWokmmwtlm {
+message MsgYvclzswKwoiqfnvf {
     string a = 1;
     bytes b = 2;
     uint64 c = 3;

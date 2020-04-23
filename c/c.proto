@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package cmtoobvajr.eqxdywkqqi.nizvnof;
 
-option go_package = "c";
+option go_package = "github.com/regen-network/proto-any-benchmark/c";
 
 message MsgIggmhogotlAdolnphpfi {
     string a = 1;
