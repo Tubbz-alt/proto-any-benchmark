@@ -10,16 +10,14 @@ import (
 	"github.com/regen-network/proto-any-benchmark/c"
 	"github.com/regen-network/proto-any-benchmark/d"
 	"github.com/regen-network/proto-any-benchmark/e"
+	"github.com/tecbot/gorocksdb"
 	db "github.com/tendermint/tm-db"
 	"math/rand"
+	"runtime"
 )
 
 type Msg interface {
 	proto.Message
-}
-
-type Fixture struct {
-	DB db.DB
 }
 
 func MakeTestData(n int) []Msg {
@@ -70,7 +68,7 @@ type Codec interface {
 	Unmarshal(bz []byte) (interface{}, error)
 }
 
-type OneofCodec struct { }
+type OneofCodec struct{}
 
 func (o OneofCodec) Marshal(x proto.Message) ([]byte, error) {
 	oneof := OneOfTest{}
@@ -90,13 +88,14 @@ func (o OneofCodec) Unmarshal(bz []byte) (interface{}, error) {
 	return oneof.GetMsg(), nil
 }
 
-type AnyCodec struct { }
+type AnyCodec struct{}
 
 func (a AnyCodec) Marshal(x proto.Message) ([]byte, error) {
-	any, err := types.MarshalAny(x)
+	value, err := proto.Marshal(x)
 	if err != nil {
 		return nil, err
 	}
+	any := &types.Any{TypeUrl: "/" + proto.MessageName(x), Value: value}
 	return any.Marshal()
 }
 
@@ -114,7 +113,76 @@ func (a AnyCodec) Unmarshal(bz []byte) (interface{}, error) {
 	return dynAny.Message, nil
 }
 
+func LoadDB(db db.DB, cdc Codec, data []Msg) {
+	for i, x := range data {
+		bz, err := cdc.Marshal(x)
+		if err != nil {
+			panic(err)
+		}
+		err = db.SetSync([]byte(fmt.Sprintf("%d", i)), bz)
+		if err != nil {
+			panic(err)
+		}
+	}
+}
+
+func TestDB(db db.DB, cdc Codec, data []Msg) {
+	LoadDB(db, cdc, data)
+	err := db.Close()
+	if err != nil {
+		panic(err)
+	}
+}
+
+func CommonRocksOpts() *gorocksdb.Options {
+	bbto := gorocksdb.NewDefaultBlockBasedTableOptions()
+	bbto.SetBlockCache(gorocksdb.NewLRUCache(1 << 30))
+	bbto.SetFilterPolicy(gorocksdb.NewBloomFilter(10))
+
+	opts := gorocksdb.NewDefaultOptions()
+	opts.SetBlockBasedTableFactory(bbto)
+	opts.SetCreateIfMissing(true)
+	opts.IncreaseParallelism(runtime.NumCPU())
+	// 1.5GB maximum memory use for writebuffer.
+	opts.OptimizeLevelStyleCompaction(512 * 1024 * 1024)
+	opts.SetCompression(gorocksdb.LZ4Compression)
+	return opts
+}
+
+func LZ4RocksOpts() *gorocksdb.Options {
+	opts := CommonRocksOpts()
+	opts.SetCompression(gorocksdb.LZ4Compression)
+	copts := gorocksdb.NewDefaultCompressionOptions()
+	copts.MaxDictBytes = 1000000
+	opts.SetCompressionOptions(copts)
+	return opts
+}
+
+func ZSTDRocksOpts() *gorocksdb.Options {
+	opts := CommonRocksOpts()
+	opts.SetCompression(gorocksdb.ZSTDCompression)
+	copts := gorocksdb.NewDefaultCompressionOptions()
+	copts.MaxDictBytes = 1000000
+	opts.SetCompressionOptions(copts)
+	return opts
+}
+
+func NewRocksDBWithopts(name string, opts *gorocksdb.Options) *db.RocksDB {
+	db, err := db.NewRocksDBWithOptions(name, "db", opts)
+	if err != nil {
+		panic(err)
+	}
+	return db
+}
+
 func main() {
-	testData := MakeTestData(100)
-	fmt.Printf("%+v", testData)
+	testData := MakeTestData(10000)
+	TestDB(db.NewDB("goleveldb-oneof", db.GoLevelDBBackend, "db"), OneofCodec{}, testData)
+	TestDB(db.NewDB("goleveldb-any", db.GoLevelDBBackend, "db"), AnyCodec{}, testData)
+	TestDB(db.NewDB("rocksdb-oneof", db.RocksDBBackend, "db"), OneofCodec{}, testData)
+	TestDB(db.NewDB("rocksdb-any", db.RocksDBBackend, "db"), AnyCodec{}, testData)
+	TestDB(NewRocksDBWithopts("rocksdb-lz4-oneof", LZ4RocksOpts()), OneofCodec{}, testData)
+	TestDB(NewRocksDBWithopts("rocksdb-lz4-any", LZ4RocksOpts()), AnyCodec{}, testData)
+	TestDB(NewRocksDBWithopts("rocksdb-zstd-oneof", ZSTDRocksOpts()), OneofCodec{}, testData)
+	TestDB(NewRocksDBWithopts("rocksdb-zstd-any", ZSTDRocksOpts()), AnyCodec{}, testData)
 }
