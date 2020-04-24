@@ -119,7 +119,12 @@ func LoadDB(db db.DB, cdc Codec, data []Msg) {
 		if err != nil {
 			panic(err)
 		}
-		err = db.SetSync([]byte(fmt.Sprintf("%d", i)), bz)
+		k := []byte(fmt.Sprintf("%d", i))
+		if i%100 == 0 {
+			err = db.SetSync(k, bz)
+		} else {
+			err = db.Set(k, bz)
+		}
 		if err != nil {
 			panic(err)
 		}
@@ -176,7 +181,7 @@ func NewRocksDBWithopts(name string, opts *gorocksdb.Options) *db.RocksDB {
 }
 
 func main() {
-	testData := MakeTestData(10000)
+	testData := MakeTestData(1000000)
 	TestDB(db.NewDB("goleveldb-oneof", db.GoLevelDBBackend, "db"), OneofCodec{}, testData)
 	TestDB(db.NewDB("goleveldb-any", db.GoLevelDBBackend, "db"), AnyCodec{}, testData)
 	TestDB(db.NewDB("rocksdb-oneof", db.RocksDBBackend, "db"), OneofCodec{}, testData)
