@@ -28,6 +28,11 @@ type MsgIggmhogotlAdolnphpfi struct {
 	C uint64 `protobuf:"varint,3,opt,name=c,proto3" json:"c,omitempty"`
 	D string `protobuf:"bytes,4,opt,name=d,proto3" json:"d,omitempty"`
 	E int64  `protobuf:"varint,5,opt,name=e,proto3" json:"e,omitempty"`
+	F []byte `protobuf:"bytes,6,opt,name=f,proto3" json:"f,omitempty"`
+	G string `protobuf:"bytes,7,opt,name=g,proto3" json:"g,omitempty"`
+	H []byte `protobuf:"bytes,8,opt,name=h,proto3" json:"h,omitempty"`
+	I string `protobuf:"bytes,9,opt,name=i,proto3" json:"i,omitempty"`
+	J []byte `protobuf:"bytes,10,opt,name=j,proto3" json:"j,omitempty"`
 }
 
 func (m *MsgIggmhogotlAdolnphpfi) Reset()         { *m = MsgIggmhogotlAdolnphpfi{} }
@@ -98,12 +103,52 @@ func (m *MsgIggmhogotlAdolnphpfi) GetE() int64 {
 	return 0
 }
 
+func (m *MsgIggmhogotlAdolnphpfi) GetF() []byte {
+	if m != nil {
+		return m.F
+	}
+	return nil
+}
+
+func (m *MsgIggmhogotlAdolnphpfi) GetG() string {
+	if m != nil {
+		return m.G
+	}
+	return ""
+}
+
+func (m *MsgIggmhogotlAdolnphpfi) GetH() []byte {
+	if m != nil {
+		return m.H
+	}
+	return nil
+}
+
+func (m *MsgIggmhogotlAdolnphpfi) GetI() string {
+	if m != nil {
+		return m.I
+	}
+	return ""
+}
+
+func (m *MsgIggmhogotlAdolnphpfi) GetJ() []byte {
+	if m != nil {
+		return m.J
+	}
+	return nil
+}
+
 type MsgCrbjxhtnahzEkoyklxdc struct {
 	A string `protobuf:"bytes,1,opt,name=a,proto3" json:"a,omitempty"`
 	B []byte `protobuf:"bytes,2,opt,name=b,proto3" json:"b,omitempty"`
 	C uint64 `protobuf:"varint,3,opt,name=c,proto3" json:"c,omitempty"`
 	D string `protobuf:"bytes,4,opt,name=d,proto3" json:"d,omitempty"`
 	E int64  `protobuf:"varint,5,opt,name=e,proto3" json:"e,omitempty"`
+	F []byte `protobuf:"bytes,6,opt,name=f,proto3" json:"f,omitempty"`
+	G string `protobuf:"bytes,7,opt,name=g,proto3" json:"g,omitempty"`
+	H []byte `protobuf:"bytes,8,opt,name=h,proto3" json:"h,omitempty"`
+	I string `protobuf:"bytes,9,opt,name=i,proto3" json:"i,omitempty"`
+	J []byte `protobuf:"bytes,10,opt,name=j,proto3" json:"j,omitempty"`
 }
 
 func (m *MsgCrbjxhtnahzEkoyklxdc) Reset()         { *m = MsgCrbjxhtnahzEkoyklxdc{} }
@@ -174,12 +219,52 @@ func (m *MsgCrbjxhtnahzEkoyklxdc) GetE() int64 {
 	return 0
 }
 
+func (m *MsgCrbjxhtnahzEkoyklxdc) GetF() []byte {
+	if m != nil {
+		return m.F
+	}
+	return nil
+}
+
+func (m *MsgCrbjxhtnahzEkoyklxdc) GetG() string {
+	if m != nil {
+		return m.G
+	}
+	return ""
+}
+
+func (m *MsgCrbjxhtnahzEkoyklxdc) GetH() []byte {
+	if m != nil {
+		return m.H
+	}
+	return nil
+}
+
+func (m *MsgCrbjxhtnahzEkoyklxdc) GetI() string {
+	if m != nil {
+		return m.I
+	}
+	return ""
+}
+
+func (m *MsgCrbjxhtnahzEkoyklxdc) GetJ() []byte {
+	if m != nil {
+		return m.J
+	}
+	return nil
+}
+
 type MsgUzewjmoiKursyvlk struct {
 	A string `protobuf:"bytes,1,opt,name=a,proto3" json:"a,omitempty"`
 	B []byte `protobuf:"bytes,2,opt,name=b,proto3" json:"b,omitempty"`
 	C uint64 `protobuf:"varint,3,opt,name=c,proto3" json:"c,omitempty"`
 	D string `protobuf:"bytes,4,opt,name=d,proto3" json:"d,omitempty"`
 	E int64  `protobuf:"varint,5,opt,name=e,proto3" json:"e,omitempty"`
+	F []byte `protobuf:"bytes,6,opt,name=f,proto3" json:"f,omitempty"`
+	G string `protobuf:"bytes,7,opt,name=g,proto3" json:"g,omitempty"`
+	H []byte `protobuf:"bytes,8,opt,name=h,proto3" json:"h,omitempty"`
+	I string `protobuf:"bytes,9,opt,name=i,proto3" json:"i,omitempty"`
+	J []byte `protobuf:"bytes,10,opt,name=j,proto3" json:"j,omitempty"`
 }
 
 func (m *MsgUzewjmoiKursyvlk) Reset()         { *m = MsgUzewjmoiKursyvlk{} }
@@ -250,6 +335,41 @@ func (m *MsgUzewjmoiKursyvlk) GetE() int64 {
 	return 0
 }
 
+func (m *MsgUzewjmoiKursyvlk) GetF() []byte {
+	if m != nil {
+		return m.F
+	}
+	return nil
+}
+
+func (m *MsgUzewjmoiKursyvlk) GetG() string {
+	if m != nil {
+		return m.G
+	}
+	return ""
+}
+
+func (m *MsgUzewjmoiKursyvlk) GetH() []byte {
+	if m != nil {
+		return m.H
+	}
+	return nil
+}
+
+func (m *MsgUzewjmoiKursyvlk) GetI() string {
+	if m != nil {
+		return m.I
+	}
+	return ""
+}
+
+func (m *MsgUzewjmoiKursyvlk) GetJ() []byte {
+	if m != nil {
+		return m.J
+	}
+	return nil
+}
+
 func init() {
 	proto.RegisterType((*MsgIggmhogotlAdolnphpfi)(nil), "cmtoobvajr.eqxdywkqqi.nizvnof.MsgIggmhogotlAdolnphpfi")
 	proto.RegisterType((*MsgCrbjxhtnahzEkoyklxdc)(nil), "cmtoobvajr.eqxdywkqqi.nizvnof.MsgCrbjxhtnahzEkoyklxdc")
@@ -259,24 +379,26 @@ func init() {
 func init() { proto.RegisterFile("c/c.proto", fileDescriptor_442095bc6be2e9f2) }
 
 var fileDescriptor_442095bc6be2e9f2 = []byte{
-	// 270 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xac, 0xd0, 0xbd, 0x4e, 0xc3, 0x30,
-	0x10, 0xc0, 0xf1, 0x1e, 0x2d, 0x48, 0x8d, 0x3a, 0x95, 0x81, 0x2c, 0x58, 0x11, 0x53, 0x96, 0x26,
-	0x03, 0x4f, 0x00, 0x08, 0x09, 0x84, 0xba, 0x44, 0x62, 0x81, 0x01, 0xd9, 0x8e, 0x6b, 0xa7, 0x4e,
-	0x7c, 0xad, 0xeb, 0xe6, 0xeb, 0x29, 0x78, 0x2c, 0xc6, 0x8e, 0x8c, 0x28, 0x79, 0x11, 0x94, 0xc2,
-	0x23, 0x74, 0xfc, 0x9d, 0x4e, 0xf7, 0x97, 0xce, 0x9b, 0xf2, 0x98, 0x47, 0x1b, 0x8b, 0x0e, 0xe7,
-	0xd7, 0xbc, 0x70, 0x88, 0xac, 0xa4, 0x6b, 0x1b, 0x89, 0x6d, 0x9d, 0x36, 0x95, 0xde, 0x6e, 0xb3,
-	0xc8, 0x64, 0x6d, 0x69, 0x70, 0x75, 0xf3, 0xe1, 0x5d, 0x2d, 0x77, 0xf2, 0x59, 0xca, 0x42, 0xa1,
-	0x44, 0x97, 0xdf, 0xa5, 0x98, 0x9b, 0x8d, 0xda, 0xac, 0xb2, 0xf9, 0xcc, 0x03, 0xea, 0x43, 0x00,
-	0xe1, 0x34, 0x01, 0x3a, 0x88, 0xf9, 0x67, 0x01, 0x84, 0xb3, 0x04, 0xd8, 0x20, 0xee, 0x8f, 0x03,
-	0x08, 0x27, 0x09, 0xf0, 0x41, 0xa9, 0x3f, 0xf9, 0xdb, 0x4c, 0x07, 0x09, 0xff, 0x3c, 0x80, 0x70,
-	0x9c, 0x80, 0xf8, 0x0f, 0x3c, 0x58, 0xb6, 0xae, 0x95, 0x33, 0x54, 0xb5, 0x8f, 0x1a, 0x1b, 0x9d,
-	0xd7, 0x29, 0x3f, 0x51, 0xe0, 0xdd, 0xbb, 0x5c, 0xee, 0xe4, 0x6b, 0x2b, 0xaa, 0x75, 0x81, 0xd9,
-	0xcb, 0xde, 0xee, 0x9a, 0x32, 0xd7, 0xa7, 0x39, 0x7e, 0xff, 0xf4, 0xd5, 0x11, 0x38, 0x74, 0x04,
-	0x7e, 0x3a, 0x02, 0x9f, 0x3d, 0x19, 0x1d, 0x7a, 0x32, 0xfa, 0xee, 0xc9, 0xe8, 0x2d, 0x92, 0x99,
-	0x53, 0x7b, 0x16, 0x71, 0x2c, 0x62, 0x2b, 0xa4, 0x30, 0x0b, 0x23, 0x5c, 0x85, 0x56, 0xc7, 0xc7,
-	0xbf, 0x2f, 0xa8, 0x69, 0x16, 0x4c, 0x18, 0xae, 0x0a, 0x6a, 0x75, 0xcc, 0xd9, 0xc5, 0x71, 0x7c,
-	0xfb, 0x1b, 0x00, 0x00, 0xff, 0xff, 0x5b, 0xf5, 0xb2, 0x33, 0x9b, 0x01, 0x00, 0x00,
+	// 304 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xcc, 0xd2, 0x3d, 0x4e, 0xc3, 0x30,
+	0x1c, 0x05, 0xf0, 0xfe, 0x69, 0x29, 0x34, 0xea, 0x54, 0x06, 0xbc, 0x10, 0x45, 0x4c, 0x59, 0x9a,
+	0x0c, 0x9c, 0x00, 0x10, 0x12, 0x08, 0x75, 0x89, 0xc4, 0xc2, 0x16, 0x3b, 0x8e, 0x9d, 0x2f, 0xff,
+	0x5b, 0xd7, 0xfd, 0x48, 0x4f, 0xc1, 0x15, 0x18, 0xb8, 0x0b, 0x63, 0x47, 0x46, 0xd4, 0x5e, 0x04,
+	0x39, 0x16, 0x77, 0xe8, 0xf8, 0xf3, 0x7b, 0x96, 0xdf, 0x60, 0x6f, 0xc4, 0x62, 0x16, 0xcd, 0x35,
+	0x1a, 0x9c, 0xdc, 0xb0, 0xc6, 0x20, 0xd2, 0x75, 0x5a, 0xea, 0x88, 0x2f, 0xb6, 0x59, 0xbb, 0xa9,
+	0x16, 0x8b, 0x22, 0x52, 0xc5, 0x6e, 0xad, 0x30, 0xbf, 0xfd, 0x02, 0xef, 0x7a, 0xb6, 0x14, 0x2f,
+	0x42, 0x34, 0x12, 0x05, 0x9a, 0xfa, 0x3e, 0xc3, 0x5a, 0xcd, 0xe5, 0x3c, 0x2f, 0x26, 0x63, 0x0f,
+	0x52, 0x02, 0x01, 0x84, 0xa3, 0x04, 0x52, 0x2b, 0x4a, 0xce, 0x02, 0x08, 0xc7, 0x09, 0x50, 0x2b,
+	0x46, 0xfa, 0x01, 0x84, 0x83, 0x04, 0x98, 0x55, 0x46, 0x06, 0xae, 0x99, 0x59, 0x71, 0x72, 0x1e,
+	0x40, 0xd8, 0x4f, 0x80, 0x5b, 0xe5, 0x64, 0xe8, 0xee, 0xe5, 0x56, 0x82, 0x5c, 0xb8, 0xa6, 0xb0,
+	0x92, 0xe4, 0xd2, 0x65, 0xd2, 0xaa, 0x20, 0x23, 0x97, 0x75, 0xaf, 0x97, 0xc4, 0x73, 0x59, 0xf9,
+	0xbf, 0xf3, 0x51, 0xd3, 0x72, 0x2b, 0x8d, 0x4a, 0xe5, 0xee, 0xa9, 0xc2, 0xb6, 0xaa, 0xb7, 0x19,
+	0x3b, 0xa9, 0x9d, 0x9f, 0xe0, 0x5d, 0xcd, 0x96, 0xe2, 0x6d, 0xc7, 0x37, 0x65, 0x83, 0xc5, 0xeb,
+	0x4a, 0x2f, 0xdb, 0x75, 0x5d, 0x9d, 0xd2, 0xc6, 0x87, 0xe7, 0xef, 0x83, 0x0f, 0xfb, 0x83, 0x0f,
+	0xbf, 0x07, 0x1f, 0x3e, 0x8e, 0x7e, 0x6f, 0x7f, 0xf4, 0x7b, 0x3f, 0x47, 0xbf, 0xf7, 0x1e, 0x89,
+	0xc2, 0xc8, 0x15, 0x8d, 0x18, 0x36, 0xb1, 0xe6, 0x82, 0xab, 0xa9, 0xe2, 0x66, 0x83, 0xba, 0x8a,
+	0xbb, 0xcf, 0x34, 0x4d, 0x55, 0x3b, 0xa5, 0x5c, 0x31, 0xd9, 0xa4, 0xba, 0x8a, 0x19, 0x1d, 0x76,
+	0xc7, 0x77, 0x7f, 0x01, 0x00, 0x00, 0xff, 0xff, 0x9f, 0x7f, 0x52, 0x78, 0x70, 0x02, 0x00, 0x00,
 }
 
 func (m *MsgIggmhogotlAdolnphpfi) Marshal() (dAtA []byte, err error) {
@@ -299,6 +421,41 @@ func (m *MsgIggmhogotlAdolnphpfi) MarshalToSizedBuffer(dAtA []byte) (int, error)
 	_ = i
 	var l int
 	_ = l
+	if len(m.J) > 0 {
+		i -= len(m.J)
+		copy(dAtA[i:], m.J)
+		i = encodeVarintC(dAtA, i, uint64(len(m.J)))
+		i--
+		dAtA[i] = 0x52
+	}
+	if len(m.I) > 0 {
+		i -= len(m.I)
+		copy(dAtA[i:], m.I)
+		i = encodeVarintC(dAtA, i, uint64(len(m.I)))
+		i--
+		dAtA[i] = 0x4a
+	}
+	if len(m.H) > 0 {
+		i -= len(m.H)
+		copy(dAtA[i:], m.H)
+		i = encodeVarintC(dAtA, i, uint64(len(m.H)))
+		i--
+		dAtA[i] = 0x42
+	}
+	if len(m.G) > 0 {
+		i -= len(m.G)
+		copy(dAtA[i:], m.G)
+		i = encodeVarintC(dAtA, i, uint64(len(m.G)))
+		i--
+		dAtA[i] = 0x3a
+	}
+	if len(m.F) > 0 {
+		i -= len(m.F)
+		copy(dAtA[i:], m.F)
+		i = encodeVarintC(dAtA, i, uint64(len(m.F)))
+		i--
+		dAtA[i] = 0x32
+	}
 	if m.E != 0 {
 		i = encodeVarintC(dAtA, i, uint64(m.E))
 		i--
@@ -353,6 +510,41 @@ func (m *MsgCrbjxhtnahzEkoyklxdc) MarshalToSizedBuffer(dAtA []byte) (int, error)
 	_ = i
 	var l int
 	_ = l
+	if len(m.J) > 0 {
+		i -= len(m.J)
+		copy(dAtA[i:], m.J)
+		i = encodeVarintC(dAtA, i, uint64(len(m.J)))
+		i--
+		dAtA[i] = 0x52
+	}
+	if len(m.I) > 0 {
+		i -= len(m.I)
+		copy(dAtA[i:], m.I)
+		i = encodeVarintC(dAtA, i, uint64(len(m.I)))
+		i--
+		dAtA[i] = 0x4a
+	}
+	if len(m.H) > 0 {
+		i -= len(m.H)
+		copy(dAtA[i:], m.H)
+		i = encodeVarintC(dAtA, i, uint64(len(m.H)))
+		i--
+		dAtA[i] = 0x42
+	}
+	if len(m.G) > 0 {
+		i -= len(m.G)
+		copy(dAtA[i:], m.G)
+		i = encodeVarintC(dAtA, i, uint64(len(m.G)))
+		i--
+		dAtA[i] = 0x3a
+	}
+	if len(m.F) > 0 {
+		i -= len(m.F)
+		copy(dAtA[i:], m.F)
+		i = encodeVarintC(dAtA, i, uint64(len(m.F)))
+		i--
+		dAtA[i] = 0x32
+	}
 	if m.E != 0 {
 		i = encodeVarintC(dAtA, i, uint64(m.E))
 		i--
@@ -407,6 +599,41 @@ func (m *MsgUzewjmoiKursyvlk) MarshalToSizedBuffer(dAtA []byte) (int, error) {
 	_ = i
 	var l int
 	_ = l
+	if len(m.J) > 0 {
+		i -= len(m.J)
+		copy(dAtA[i:], m.J)
+		i = encodeVarintC(dAtA, i, uint64(len(m.J)))
+		i--
+		dAtA[i] = 0x52
+	}
+	if len(m.I) > 0 {
+		i -= len(m.I)
+		copy(dAtA[i:], m.I)
+		i = encodeVarintC(dAtA, i, uint64(len(m.I)))
+		i--
+		dAtA[i] = 0x4a
+	}
+	if len(m.H) > 0 {
+		i -= len(m.H)
+		copy(dAtA[i:], m.H)
+		i = encodeVarintC(dAtA, i, uint64(len(m.H)))
+		i--
+		dAtA[i] = 0x42
+	}
+	if len(m.G) > 0 {
+		i -= len(m.G)
+		copy(dAtA[i:], m.G)
+		i = encodeVarintC(dAtA, i, uint64(len(m.G)))
+		i--
+		dAtA[i] = 0x3a
+	}
+	if len(m.F) > 0 {
+		i -= len(m.F)
+		copy(dAtA[i:], m.F)
+		i = encodeVarintC(dAtA, i, uint64(len(m.F)))
+		i--
+		dAtA[i] = 0x32
+	}
 	if m.E != 0 {
 		i = encodeVarintC(dAtA, i, uint64(m.E))
 		i--
@@ -476,6 +703,26 @@ func (m *MsgIggmhogotlAdolnphpfi) Size() (n int) {
 	if m.E != 0 {
 		n += 1 + sovC(uint64(m.E))
 	}
+	l = len(m.F)
+	if l > 0 {
+		n += 1 + l + sovC(uint64(l))
+	}
+	l = len(m.G)
+	if l > 0 {
+		n += 1 + l + sovC(uint64(l))
+	}
+	l = len(m.H)
+	if l > 0 {
+		n += 1 + l + sovC(uint64(l))
+	}
+	l = len(m.I)
+	if l > 0 {
+		n += 1 + l + sovC(uint64(l))
+	}
+	l = len(m.J)
+	if l > 0 {
+		n += 1 + l + sovC(uint64(l))
+	}
 	return n
 }
 
@@ -503,6 +750,26 @@ func (m *MsgCrbjxhtnahzEkoyklxdc) Size() (n int) {
 	if m.E != 0 {
 		n += 1 + sovC(uint64(m.E))
 	}
+	l = len(m.F)
+	if l > 0 {
+		n += 1 + l + sovC(uint64(l))
+	}
+	l = len(m.G)
+	if l > 0 {
+		n += 1 + l + sovC(uint64(l))
+	}
+	l = len(m.H)
+	if l > 0 {
+		n += 1 + l + sovC(uint64(l))
+	}
+	l = len(m.I)
+	if l > 0 {
+		n += 1 + l + sovC(uint64(l))
+	}
+	l = len(m.J)
+	if l > 0 {
+		n += 1 + l + sovC(uint64(l))
+	}
 	return n
 }
 
@@ -529,6 +796,26 @@ func (m *MsgUzewjmoiKursyvlk) Size() (n int) {
 	}
 	if m.E != 0 {
 		n += 1 + sovC(uint64(m.E))
+	}
+	l = len(m.F)
+	if l > 0 {
+		n += 1 + l + sovC(uint64(l))
+	}
+	l = len(m.G)
+	if l > 0 {
+		n += 1 + l + sovC(uint64(l))
+	}
+	l = len(m.H)
+	if l > 0 {
+		n += 1 + l + sovC(uint64(l))
+	}
+	l = len(m.I)
+	if l > 0 {
+		n += 1 + l + sovC(uint64(l))
+	}
+	l = len(m.J)
+	if l > 0 {
+		n += 1 + l + sovC(uint64(l))
 	}
 	return n
 }
@@ -704,6 +991,172 @@ func (m *MsgIggmhogotlAdolnphpfi) Unmarshal(dAtA []byte) error {
 					break
 				}
 			}
+		case 6:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field F", wireType)
+			}
+			var byteLen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowC
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				byteLen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if byteLen < 0 {
+				return ErrInvalidLengthC
+			}
+			postIndex := iNdEx + byteLen
+			if postIndex < 0 {
+				return ErrInvalidLengthC
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.F = append(m.F[:0], dAtA[iNdEx:postIndex]...)
+			if m.F == nil {
+				m.F = []byte{}
+			}
+			iNdEx = postIndex
+		case 7:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field G", wireType)
+			}
+			var stringLen uint64
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowC
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				stringLen |= uint64(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			intStringLen := int(stringLen)
+			if intStringLen < 0 {
+				return ErrInvalidLengthC
+			}
+			postIndex := iNdEx + intStringLen
+			if postIndex < 0 {
+				return ErrInvalidLengthC
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.G = string(dAtA[iNdEx:postIndex])
+			iNdEx = postIndex
+		case 8:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field H", wireType)
+			}
+			var byteLen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowC
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				byteLen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if byteLen < 0 {
+				return ErrInvalidLengthC
+			}
+			postIndex := iNdEx + byteLen
+			if postIndex < 0 {
+				return ErrInvalidLengthC
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.H = append(m.H[:0], dAtA[iNdEx:postIndex]...)
+			if m.H == nil {
+				m.H = []byte{}
+			}
+			iNdEx = postIndex
+		case 9:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field I", wireType)
+			}
+			var stringLen uint64
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowC
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				stringLen |= uint64(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			intStringLen := int(stringLen)
+			if intStringLen < 0 {
+				return ErrInvalidLengthC
+			}
+			postIndex := iNdEx + intStringLen
+			if postIndex < 0 {
+				return ErrInvalidLengthC
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.I = string(dAtA[iNdEx:postIndex])
+			iNdEx = postIndex
+		case 10:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field J", wireType)
+			}
+			var byteLen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowC
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				byteLen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if byteLen < 0 {
+				return ErrInvalidLengthC
+			}
+			postIndex := iNdEx + byteLen
+			if postIndex < 0 {
+				return ErrInvalidLengthC
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.J = append(m.J[:0], dAtA[iNdEx:postIndex]...)
+			if m.J == nil {
+				m.J = []byte{}
+			}
+			iNdEx = postIndex
 		default:
 			iNdEx = preIndex
 			skippy, err := skipC(dAtA[iNdEx:])
@@ -893,6 +1346,172 @@ func (m *MsgCrbjxhtnahzEkoyklxdc) Unmarshal(dAtA []byte) error {
 					break
 				}
 			}
+		case 6:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field F", wireType)
+			}
+			var byteLen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowC
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				byteLen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if byteLen < 0 {
+				return ErrInvalidLengthC
+			}
+			postIndex := iNdEx + byteLen
+			if postIndex < 0 {
+				return ErrInvalidLengthC
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.F = append(m.F[:0], dAtA[iNdEx:postIndex]...)
+			if m.F == nil {
+				m.F = []byte{}
+			}
+			iNdEx = postIndex
+		case 7:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field G", wireType)
+			}
+			var stringLen uint64
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowC
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				stringLen |= uint64(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			intStringLen := int(stringLen)
+			if intStringLen < 0 {
+				return ErrInvalidLengthC
+			}
+			postIndex := iNdEx + intStringLen
+			if postIndex < 0 {
+				return ErrInvalidLengthC
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.G = string(dAtA[iNdEx:postIndex])
+			iNdEx = postIndex
+		case 8:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field H", wireType)
+			}
+			var byteLen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowC
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				byteLen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if byteLen < 0 {
+				return ErrInvalidLengthC
+			}
+			postIndex := iNdEx + byteLen
+			if postIndex < 0 {
+				return ErrInvalidLengthC
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.H = append(m.H[:0], dAtA[iNdEx:postIndex]...)
+			if m.H == nil {
+				m.H = []byte{}
+			}
+			iNdEx = postIndex
+		case 9:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field I", wireType)
+			}
+			var stringLen uint64
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowC
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				stringLen |= uint64(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			intStringLen := int(stringLen)
+			if intStringLen < 0 {
+				return ErrInvalidLengthC
+			}
+			postIndex := iNdEx + intStringLen
+			if postIndex < 0 {
+				return ErrInvalidLengthC
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.I = string(dAtA[iNdEx:postIndex])
+			iNdEx = postIndex
+		case 10:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field J", wireType)
+			}
+			var byteLen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowC
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				byteLen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if byteLen < 0 {
+				return ErrInvalidLengthC
+			}
+			postIndex := iNdEx + byteLen
+			if postIndex < 0 {
+				return ErrInvalidLengthC
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.J = append(m.J[:0], dAtA[iNdEx:postIndex]...)
+			if m.J == nil {
+				m.J = []byte{}
+			}
+			iNdEx = postIndex
 		default:
 			iNdEx = preIndex
 			skippy, err := skipC(dAtA[iNdEx:])
@@ -1082,6 +1701,172 @@ func (m *MsgUzewjmoiKursyvlk) Unmarshal(dAtA []byte) error {
 					break
 				}
 			}
+		case 6:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field F", wireType)
+			}
+			var byteLen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowC
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				byteLen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if byteLen < 0 {
+				return ErrInvalidLengthC
+			}
+			postIndex := iNdEx + byteLen
+			if postIndex < 0 {
+				return ErrInvalidLengthC
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.F = append(m.F[:0], dAtA[iNdEx:postIndex]...)
+			if m.F == nil {
+				m.F = []byte{}
+			}
+			iNdEx = postIndex
+		case 7:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field G", wireType)
+			}
+			var stringLen uint64
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowC
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				stringLen |= uint64(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			intStringLen := int(stringLen)
+			if intStringLen < 0 {
+				return ErrInvalidLengthC
+			}
+			postIndex := iNdEx + intStringLen
+			if postIndex < 0 {
+				return ErrInvalidLengthC
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.G = string(dAtA[iNdEx:postIndex])
+			iNdEx = postIndex
+		case 8:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field H", wireType)
+			}
+			var byteLen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowC
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				byteLen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if byteLen < 0 {
+				return ErrInvalidLengthC
+			}
+			postIndex := iNdEx + byteLen
+			if postIndex < 0 {
+				return ErrInvalidLengthC
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.H = append(m.H[:0], dAtA[iNdEx:postIndex]...)
+			if m.H == nil {
+				m.H = []byte{}
+			}
+			iNdEx = postIndex
+		case 9:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field I", wireType)
+			}
+			var stringLen uint64
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowC
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				stringLen |= uint64(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			intStringLen := int(stringLen)
+			if intStringLen < 0 {
+				return ErrInvalidLengthC
+			}
+			postIndex := iNdEx + intStringLen
+			if postIndex < 0 {
+				return ErrInvalidLengthC
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.I = string(dAtA[iNdEx:postIndex])
+			iNdEx = postIndex
+		case 10:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field J", wireType)
+			}
+			var byteLen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowC
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				byteLen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if byteLen < 0 {
+				return ErrInvalidLengthC
+			}
+			postIndex := iNdEx + byteLen
+			if postIndex < 0 {
+				return ErrInvalidLengthC
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.J = append(m.J[:0], dAtA[iNdEx:postIndex]...)
+			if m.J == nil {
+				m.J = []byte{}
+			}
+			iNdEx = postIndex
 		default:
 			iNdEx = preIndex
 			skippy, err := skipC(dAtA[iNdEx:])

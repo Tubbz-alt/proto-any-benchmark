@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/brianvoe/gofakeit/v5"
+	"github.com/gogo/protobuf/jsonpb"
 	"github.com/gogo/protobuf/proto"
 	"github.com/gogo/protobuf/types"
 	"github.com/regen-network/proto-any-benchmark/a"
@@ -68,6 +69,8 @@ type Codec interface {
 	Unmarshal(bz []byte) (interface{}, error)
 }
 
+var jsonpbMarshaler = &jsonpb.Marshaler{}
+
 type OneofCodec struct{}
 
 func (o OneofCodec) Marshal(x proto.Message) ([]byte, error) {
@@ -76,7 +79,11 @@ func (o OneofCodec) Marshal(x proto.Message) ([]byte, error) {
 	if err != nil {
 		return nil, err
 	}
-	return oneof.Marshal()
+	//s, _ := jsonpbMarshaler.MarshalToString(&oneof)
+	//fmt.Println(s)
+	bz, err := oneof.Marshal()
+	//fmt.Printf("oneof:%s\n", bz)
+	return bz, err
 }
 
 func (o OneofCodec) Unmarshal(bz []byte) (interface{}, error) {
@@ -96,7 +103,11 @@ func (a AnyCodec) Marshal(x proto.Message) ([]byte, error) {
 		return nil, err
 	}
 	any := &types.Any{TypeUrl: "/" + proto.MessageName(x), Value: value}
-	return any.Marshal()
+	//s, _ := jsonpbMarshaler.MarshalToString(any)
+	//fmt.Println(s)
+	bz, err := any.Marshal()
+	//fmt.Printf("any:%s\n", bz)
+	return bz, err
 }
 
 func (a AnyCodec) Unmarshal(bz []byte) (interface{}, error) {
@@ -113,6 +124,25 @@ func (a AnyCodec) Unmarshal(bz []byte) (interface{}, error) {
 	return dynAny.Message, nil
 }
 
+func CalcAnyOverhead(msg Msg) float64 {
+	bz, err := proto.Marshal(msg)
+	if err != nil {
+		panic(err)
+	}
+	name := proto.MessageName(msg)
+	m := float64(len(name))
+	n := m + float64(len(bz))
+	return m / n
+}
+
+func CalcAnyOverheads(msgs []Msg) float64 {
+	var sum float64
+	for _, x := range msgs {
+		sum += CalcAnyOverhead(x)
+	}
+	return sum / float64(len(msgs))
+}
+
 func LoadDB(db db.DB, cdc Codec, data []Msg) {
 	for i, x := range data {
 		bz, err := cdc.Marshal(x)
@@ -120,7 +150,7 @@ func LoadDB(db db.DB, cdc Codec, data []Msg) {
 			panic(err)
 		}
 		k := []byte(fmt.Sprintf("%d", i))
-		if i%100 == 0 {
+		if i%1000 == 0 {
 			err = db.SetSync(k, bz)
 		} else {
 			err = db.Set(k, bz)
@@ -182,12 +212,14 @@ func NewRocksDBWithopts(name string, opts *gorocksdb.Options) *db.RocksDB {
 
 func main() {
 	testData := MakeTestData(1000000)
+	overhead := CalcAnyOverheads(testData)
+	fmt.Printf("Any Overhead: %f%%\n", overhead * 100.0)
 	TestDB(db.NewDB("goleveldb-oneof", db.GoLevelDBBackend, "db"), OneofCodec{}, testData)
 	TestDB(db.NewDB("goleveldb-any", db.GoLevelDBBackend, "db"), AnyCodec{}, testData)
-	TestDB(db.NewDB("rocksdb-oneof", db.RocksDBBackend, "db"), OneofCodec{}, testData)
-	TestDB(db.NewDB("rocksdb-any", db.RocksDBBackend, "db"), AnyCodec{}, testData)
-	TestDB(NewRocksDBWithopts("rocksdb-lz4-oneof", LZ4RocksOpts()), OneofCodec{}, testData)
-	TestDB(NewRocksDBWithopts("rocksdb-lz4-any", LZ4RocksOpts()), AnyCodec{}, testData)
-	TestDB(NewRocksDBWithopts("rocksdb-zstd-oneof", ZSTDRocksOpts()), OneofCodec{}, testData)
-	TestDB(NewRocksDBWithopts("rocksdb-zstd-any", ZSTDRocksOpts()), AnyCodec{}, testData)
+	//TestDB(db.NewDB("rocksdb-oneof", db.RocksDBBackend, "db"), OneofCodec{}, testData)
+	//TestDB(db.NewDB("rocksdb-any", db.RocksDBBackend, "db"), AnyCodec{}, testData)
+	//TestDB(NewRocksDBWithopts("rocksdb-lz4-oneof", LZ4RocksOpts()), OneofCodec{}, testData)
+	//TestDB(NewRocksDBWithopts("rocksdb-lz4-any", LZ4RocksOpts()), AnyCodec{}, testData)
+	//TestDB(NewRocksDBWithopts("rocksdb-zstd-oneof", ZSTDRocksOpts()), OneofCodec{}, testData)
+	//TestDB(NewRocksDBWithopts("rocksdb-zstd-any", ZSTDRocksOpts()), AnyCodec{}, testData)
 }

@@ -10,6 +10,11 @@ message MsgIggmhogotlAdolnphpfi {
     uint64 c = 3;
     string d = 4;
     int64 e = 5;
+    bytes f = 6;
+    string g = 7;
+    bytes h = 8;
+    string i = 9;
+    bytes j = 10;
 }
 
 message MsgCrbjxhtnahzEkoyklxdc {
@@ -18,6 +23,11 @@ message MsgCrbjxhtnahzEkoyklxdc {
     uint64 c = 3;
     string d = 4;
     int64 e = 5;
+    bytes f = 6;
+    string g = 7;
+    bytes h = 8;
+    string i = 9;
+    bytes j = 10;
 }
 
 message MsgUzewjmoiKursyvlk {
@@ -26,5 +36,10 @@ message MsgUzewjmoiKursyvlk {
     uint64 c = 3;
     string d = 4;
     int64 e = 5;
+    bytes f = 6;
+    string g = 7;
+    bytes h = 8;
+    string i = 9;
+    bytes j = 10;
 }
 

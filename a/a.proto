@@ -10,6 +10,11 @@ message MsgPousljlwlybJloivfeuc {
     uint64 c = 3;
     string d = 4;
     int64 e = 5;
+    bytes f = 6;
+    string g = 7;
+    bytes h = 8;
+    string i = 9;
+    bytes j = 10;
 }
 
 message MsgMrtsdxfVexxblyqrzg {
@@ -18,6 +23,11 @@ message MsgMrtsdxfVexxblyqrzg {
     uint64 c = 3;
     string d = 4;
     int64 e = 5;
+    bytes f = 6;
+    string g = 7;
+    bytes h = 8;
+    string i = 9;
+    bytes j = 10;
 }
 
 message MsgLpctqrWokmmwtlm {
@@ -26,4 +36,9 @@ message MsgLpctqrWokmmwtlm {
     uint64 c = 3;
     string d = 4;
     int64 e = 5;
+    bytes f = 6;
+    string g = 7;
+    bytes h = 8;
+    string i = 9;
+    bytes j = 10;
 }
